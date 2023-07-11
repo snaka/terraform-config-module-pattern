@@ -1,0 +1,6 @@
+domain: dev.example.com
+nat_gateway_zones:
+  # 'private zone' to 'nat gw zone (public)' combination
+  #   dev environment don't need redundancy, so use same zone
+  ap-northeast-1a: ap-northeast-1a
+  ap-northeast-1c: ap-northeast-1a
