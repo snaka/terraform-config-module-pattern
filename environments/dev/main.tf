@@ -1,3 +1,7 @@
+module "config" {
+  source = "../../modules/config"
+}
+
 provider "aws" {
   region = "ap-northeast-1"
 
@@ -9,11 +13,6 @@ provider "aws" {
   }
 }
 
-module "config" {
-  source = "../../modules/config"
-}
-
 module "vpc" {
   source = "../../modules/vpc"
-  conf   = module.config
 }
